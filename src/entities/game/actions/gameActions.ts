@@ -5,11 +5,15 @@ export const start = () => {
 
   if (status === "playing") return;
 
-  useGameStore.setState({ status: "playing" });
+  useGameStore.setState({ status: "playing" }, false, "game/start");
 };
 
 export const reset = () => {
-  useGameStore.setState({ status: "idle", flagsLeft: 10, playingTime: 0 });
+  useGameStore.setState(
+    { status: "idle", flagsLeft: 10, playingTime: 0 },
+    false,
+    "game/reset",
+  );
 };
 
 export const applySecondToTimer = () => {
@@ -17,5 +21,9 @@ export const applySecondToTimer = () => {
 
   if (status !== "playing") return;
 
-  useGameStore.setState({ playingTime: playingTime + 1 });
+  useGameStore.setState(
+    { playingTime: playingTime + 1 },
+    false,
+    "game/applySecondToTimer",
+  );
 };
