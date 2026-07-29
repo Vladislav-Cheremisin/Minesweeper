@@ -1,0 +1,7 @@
+export type GameStatus = "idle" | "playing" | "won" | "lost";
+
+export type GameState = {
+  status: GameStatus;
+  flagsLeft: number;
+  playingTime: number;
+};
