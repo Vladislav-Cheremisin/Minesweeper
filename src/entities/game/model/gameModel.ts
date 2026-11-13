@@ -5,6 +5,7 @@ export type GameState = {
   fieldSize: FieldSize;
   flagsLeft: number;
   playingTime: number;
+  isMenuOpen: boolean;
 };
 
 export type FieldSize = {

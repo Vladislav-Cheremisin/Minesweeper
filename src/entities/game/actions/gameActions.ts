@@ -27,3 +27,12 @@ export const applySecondToTimer = () => {
     "game/applySecondToTimer",
   );
 };
+export const toggleMenu = () => {
+  const { isMenuOpen } = useGameStore.getState();
+
+  useGameStore.setState(
+    { isMenuOpen: !isMenuOpen },
+    false,
+    "game/toggleMenuOpen",
+  );
+};

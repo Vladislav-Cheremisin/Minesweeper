@@ -10,6 +10,7 @@ export const useGameStore = create<GameState>()(
       fieldSize: DEFAULT_FIELD_SIZE,
       flagsLeft: 10,
       playingTime: 0,
+      isMenuOpen: false,
     }),
     {
       name: "GameStore",

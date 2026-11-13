@@ -1,5 +1,6 @@
 import { Field } from "@/features/field";
 import { SettingsMenu } from "@/features/settings";
+import { StatusDialog } from "@/features/statusDialog";
 import { Navbar } from "@/widgets/Navbar";
 
 function MainPage() {
@@ -8,6 +9,7 @@ function MainPage() {
       <Navbar />
       <Field />
       <SettingsMenu />
+      <StatusDialog />
     </main>
   );
 }
